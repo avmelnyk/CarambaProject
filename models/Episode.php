@@ -28,5 +28,78 @@ class Episode
         $this->torrent_path = $torrent_path;
     }
 
+    public function getSeasonId()
+    {
+        return $this->season_id;
+    }
+
+    public function setSeasonId($season_id)
+    {
+        $this->season_id = $season_id;
+    }
+
+    public function getEpisodeId()
+    {
+        return $this->episode_id;
+    }
+
+    public function setEpisodeId($episode_id)
+    {
+        $this->episode_id = $episode_id;
+    }
+
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+    }
+
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    public function getMeta()
+    {
+        return $this->meta;
+    }
+
+    public function setMeta($meta)
+    {
+        $this->meta = $meta;
+    }
+
+
+    public function getTorrentPath()
+    {
+        return $this->torrent_path;
+    }
+
+
+    public function setTorrentPath($torrent_path)
+    {
+        $this->torrent_path = $torrent_path;
+    }
+
+
 
 }

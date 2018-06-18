@@ -7,7 +7,6 @@ include 'models/Episode.php';
  * Time: 11:27 PM
  */
 
-//Сімпсони (Сезон 1) (1989-1990) HDTVRip 720p Сімпсони (Сезон 2) (1990-1991) DVDRip
     $dir  = '/home/avmelnyk/Downloads/Сімпсони [HURTOM.COM]/';
     $files = scandir($dir);
     array_splice($files, 0, 2);
@@ -17,10 +16,12 @@ include 'models/Episode.php';
         $episodes = scandir($dir . '/' . $dir_name);
         array_splice($episodes, 0, 2);
         foreach ($episodes as $episode) {
-             $episode =  explode(" ", $episode)[0] . '</br>';
-             echo $season_id =  explode("x", $episode)[0] . ' ';
-             echo $episode_id =  explode("x", $episode)[1] . '</br>';
-
+            $episode_num_sea =  explode("-", $episode)[0];
+            $season_id =  explode("x", $episode_num_sea)[0];
+            $episode_id =  explode("x", $episode_num_sea)[1];
+            $title = explode("-", $episode)[1];
+            $episode = new Episode($season_id, $episode_id,12, 'url', $title, 'meta', 'path' );
+            var_dump($episode);
         }
         //var_dump($episodes);
     }
